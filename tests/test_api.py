@@ -24,7 +24,7 @@ def test_get_poetry_author():
     r3 = get_poetry('author', 'Ernest Dowson', 'author,title,linecount', output_format='text')
 
     assert isinstance(r3, str)
-    
+
 
 @vcr.use_cassette('tests/cassettes/test_get_poetry_title.yml')
 def test_get_poetry_title():

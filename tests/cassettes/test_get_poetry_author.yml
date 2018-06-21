@@ -15,7 +15,7 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['101']
       Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 21 Jun 2018 15:28:20 GMT']
+      Date: ['Thu, 21 Jun 2018 16:51:28 GMT']
       Server: [Cowboy]
       Status: [200 OK]
       Via: [1.1 vegur]
@@ -36,7 +36,40 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['101']
       Content-Type: [application/json;charset=utf-8]
-      Date: ['Thu, 21 Jun 2018 15:28:20 GMT']
+      Date: ['Thu, 21 Jun 2018 16:51:28 GMT']
+      Server: [Cowboy]
+      Status: [200 OK]
+      Via: [1.1 vegur]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://poetrydb.org/author/Ernest%20Dowson/author,title,linecount.text
+  response:
+    body: {string: 'title
+
+        The Moon Maiden''s Song
+
+        author
+
+        Ernest Dowson
+
+        linecount
+
+        16
+
+
+'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['64']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Thu, 21 Jun 2018 16:51:28 GMT']
       Server: [Cowboy]
       Status: [200 OK]
       Via: [1.1 vegur]
