@@ -1,0 +1,26 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://poetrydb.org/linecount/51/author,linecount,title
+  response:
+    body: {string: "[\n  {\n    \"title\": \"Health\",\n    \"author\": \"Edward Thomas\",\n
+        \   \"linecount\": \"51\"\n  },\n  {\n    \"title\": \"Approaching Night\",\n
+        \   \"author\": \"John Clare\",\n    \"linecount\": \"51\"\n  },\n  {\n    \"title\":
+        \"The Sunset\",\n    \"author\": \"Percy Bysshe Shelley\",\n    \"linecount\":
+        \"51\"\n  }\n]"}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['276']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Thu, 21 Jun 2018 15:58:54 GMT']
+      Server: [Cowboy]
+      Status: [200 OK]
+      Via: [1.1 vegur]
+    status: {code: 200, message: OK}
+version: 1

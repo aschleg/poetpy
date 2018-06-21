@@ -1,8 +1,11 @@
 $ cat .gitignore
 
+.cache/
 .DS_Store
 .idea/
 *.pyc
 *.xml
 notebooks
 *.egg-info
+/build/
+/dist/

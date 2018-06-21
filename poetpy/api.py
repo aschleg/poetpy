@@ -93,9 +93,9 @@ def get_poetry(input_term, search_term=None, output=None, output_format=None, se
 
     req = requests.get(uri)
 
-    # if output_format == 'json' or output_format != 'text':
-    #     req = req.json()
-    # else:
-    #     req = req.text
+    if output_format == 'json' or output_format != 'text':
+        req = req.json()
+    else:
+        req = req.text
 
     return req

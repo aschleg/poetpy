@@ -1,6 +1,5 @@
 import vcr
 import pytest
-import poetpy
 from poetpy import get_poetry
 
 
@@ -9,6 +8,7 @@ tape = vcr.VCR(
     serializer='json',
     record_mode='once'
 )
+
 
 @vcr.use_cassette('tests/cassettes/test_get_poetry_author.yml')
 def test_get_poetry_author():
@@ -38,6 +38,22 @@ def test_get_poetry_title():
     assert r4[0]['title'] == 'Orpheus with his Lute Made Trees'
 
 
-@vcr.use_cassette('tests/cassettes/test_get_poetry_title.yml')
-def test_get_poetry_title():
-    pass
+@vcr.use_cassette('tests/cassettes/test_get_poetry_lines.yml')
+def test_get_poetry_lines():
+    r = get_poetry('lines', 'Latitudeless Place', 'author,title,linecount')
+
+    assert r[0]['author'] == 'Emily Dickinson'
+    assert int(r[0]['linecount']) == 20
+    assert r[0]['title'] == 'Now I knew I lost her --'
+
+
+@vcr.use_cassette('tests/cassettes/test_get_poetry_linecount.yml')
+def test_get_poetry_linecount():
+    r = get_poetry('linecount', '51', 'author,linecount,title')
+
+    assert isinstance(r, list)
+    assert r[0]['author'] == 'Edward Thomas'
+    assert r[1]['author'] == 'John Clare'
+    assert r[2]['author'] == 'Percy Bysshe Shelley'
+
+    assert r[0]['linecount'] == r[1]['linecount'] == r[2]['linecount']

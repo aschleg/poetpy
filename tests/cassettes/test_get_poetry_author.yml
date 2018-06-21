@@ -7,7 +7,7 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: http://poetrydb.org/author/Ernest%20Dowson:abs/author,title,linecount
+    uri: http://poetrydb.org/author/Ernest%20Dowson/author,title,linecount
   response:
     body: {string: "[\n  {\n    \"title\": \"The Moon Maiden's Song\",\n    \"author\":
         \"Ernest Dowson\",\n    \"linecount\": 16\n  }\n]"}
@@ -15,7 +15,7 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['101']
       Content-Type: [application/json;charset=utf-8]
-      Date: ['Wed, 20 Jun 2018 21:50:07 GMT']
+      Date: ['Thu, 21 Jun 2018 15:28:20 GMT']
       Server: [Cowboy]
       Status: [200 OK]
       Via: [1.1 vegur]
@@ -36,7 +36,7 @@ interactions:
       Connection: [keep-alive]
       Content-Length: ['101']
       Content-Type: [application/json;charset=utf-8]
-      Date: ['Wed, 20 Jun 2018 21:50:08 GMT']
+      Date: ['Thu, 21 Jun 2018 15:28:20 GMT']
       Server: [Cowboy]
       Status: [200 OK]
       Via: [1.1 vegur]

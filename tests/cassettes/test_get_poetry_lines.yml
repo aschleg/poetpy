@@ -1,0 +1,23 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://poetrydb.org/lines/Latitudeless%20Place/author,title,linecount
+  response:
+    body: {string: "[\n  {\n    \"title\": \"Now I knew I lost her --\",\n    \"author\":
+        \"Emily Dickinson\",\n    \"linecount\": 20\n  }\n]"}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['105']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Thu, 21 Jun 2018 15:31:23 GMT']
+      Server: [Cowboy]
+      Status: [200 OK]
+      Via: [1.1 vegur]
+    status: {code: 200, message: OK}
+version: 1
