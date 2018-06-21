@@ -1,0 +1,44 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://poetrydb.org/title/A%20Lover's%20Complaint:abs/author,title,linecount
+  response:
+    body: {string: "[\n  {\n    \"title\": \"A Lover's Complaint\",\n    \"author\":
+        \"William Shakespeare\",\n    \"linecount\": 331\n  }\n]"}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['105']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Wed, 20 Jun 2018 21:50:08 GMT']
+      Server: [Cowboy]
+      Status: [200 OK]
+      Via: [1.1 vegur]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://poetrydb.org/title/Orpheus%20with%20his%20Lute%20Made%20Trees:abs/author,title,linecount
+  response:
+    body: {string: "[\n  {\n    \"title\": \"Orpheus with his Lute Made Trees\",\n
+        \   \"author\": \"William Shakespeare\",\n    \"linecount\": 12\n  }\n]"}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['117']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Wed, 20 Jun 2018 21:50:08 GMT']
+      Server: [Cowboy]
+      Status: [200 OK]
+      Via: [1.1 vegur]
+    status: {code: 200, message: OK}
+version: 1

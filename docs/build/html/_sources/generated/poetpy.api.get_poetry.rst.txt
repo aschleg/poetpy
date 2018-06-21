@@ -1,0 +1,6 @@
+poetpy.api.get\_poetry
+======================
+
+.. currentmodule:: poetpy.api
+
+.. autofunction:: get_poetry

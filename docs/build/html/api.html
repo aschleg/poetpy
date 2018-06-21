@@ -1,0 +1,142 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>API Reference &#8212; poetpy 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Version 1.0.0" href="versions.html" />
+    <link rel="prev" title="Poetpy - Python Wrapper for the PoetryDB API" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="poetpy.api.get_poetry">
+<code class="descclassname">poetpy.api.</code><code class="descname">get_poetry</code><span class="sig-paren">(</span><em>input_term</em>, <em>search_term=None</em>, <em>output=None</em>, <em>output_format=None</em>, <em>search_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poetpy.api.get_poetry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Primary function for interfacing with the PoetryDB API.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>input_term</strong> (<em>{'author'</em><em>, </em><em>'title'</em><em>, </em><em>'lines'</em><em>, </em><em>'linecount'}</em>) – The desired input term for searching PoetryDB. Must be one of ‘author’, ‘title’, ‘lines’, or ‘linecount’.</li>
+<li><strong>search_term</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Relates to the <code class="code docutils literal notranslate"><span class="pre">input_term</span></code>. The search term should be relevant to the given input term.</li>
+<li><strong>output</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Can be any or a combination of the input terms {‘author’, ‘title’, ‘lines’, ‘linecount’}. If None, all
+the data returned from PoetryDB by the search will be returned. The output can also be a combination of
+the terms, for example, an output of ‘author,title,lines,linecount’, will return the same result as if the
+parameter is set to None. An output of ‘title,lines’, will return the poem’s title and text.</li>
+<li><strong>output_format</strong> (<em>{'json'</em><em>, </em><em>'text'</em><em>, </em><em>None</em><em> (</em><em>default</em><em>)</em><em>}</em>) – If None or ‘json’, the results are returned in JSON format (the PoetryDB API default). If ‘text’, the
+results are returned as a string with newline escapes.</li>
+<li><strong>search_type</strong> (<em>'abs'</em><em> or </em><em>None</em><em> (</em><em>default</em><em>)</em><em>, </em><em>optional</em>) – If None (default), the search attempts to match any part of the <code class="code docutils literal notranslate"><span class="pre">input_term</span></code>. If ‘abs’, the search
+will attempt to find an exact match when searching for the <code class="code docutils literal notranslate"><span class="pre">input_term</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>req</strong> – If <code class="code docutils literal notranslate"><span class="pre">output_format</span></code> is None or ‘json’, a JSON-like dict object is returned. If the specified output
+format is ‘text’, the result is returned as a newline escaped string.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict or str</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_poetry</span><span class="p">(</span><span class="s1">&#39;author&#39;</span><span class="p">,</span> <span class="s1">&#39;Ernest Dowson&#39;</span><span class="p">,</span> <span class="s1">&#39;abs&#39;</span><span class="p">,</span> <span class="s1">&#39;author,title,linecount&#39;</span><span class="p">)</span>
+<span class="go">[{&#39;author&#39;: &#39;Ernest Dowson&#39;,</span>
+<span class="go">  &#39;linecount&#39;: 16,</span>
+<span class="go">  &#39;title&#39;: &quot;The Moon Maiden&#39;s Song&quot;}]</span>
+<span class="go"># The following will return all of William Shakespeare&#39;s poem titles and linecounts.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">get_poetry</span><span class="p">(</span><span class="s1">&#39;author&#39;</span><span class="p">,</span> <span class="s1">&#39;William Shakespeare&#39;</span><span class="p">,</span> <span class="s1">&#39;title,linecount&#39;</span><span class="p">)</span>
+<span class="go"># With the extracted information, we can easily see how many Shakespeare poems are included in the PoetryDB.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="go">162</span>
+<span class="go"># Using a quick and dirty loop, we can find the total number of lines written in Shakespeare&#39;s poems.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">linecount</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">r</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">linecount</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s1">&#39;linecount&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">linecount</span>
+<span class="go">2606</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Poetpy - Python Wrapper for the PoetryDB API</a></li>
+      <li>Next: <a href="versions.html" title="next chapter">Version 1.0.0</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Aaron Schlegel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/api.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
