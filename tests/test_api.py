@@ -21,6 +21,10 @@ def test_get_poetry_author():
 
     assert r1 == r2
 
+    r3 = get_poetry('author', 'Ernest Dowson', 'author,title,linecount', output_format='text')
+
+    assert isinstance(r3, str)
+    
 
 @vcr.use_cassette('tests/cassettes/test_get_poetry_title.yml')
 def test_get_poetry_title():
@@ -57,3 +61,10 @@ def test_get_poetry_linecount():
     assert r[2]['author'] == 'Percy Bysshe Shelley'
 
     assert r[0]['linecount'] == r[1]['linecount'] == r[2]['linecount']
+
+
+def test_poetry_exceptions():
+    with pytest.raises(ValueError):
+        r = get_poetry('asybr')
+    with pytest.raises(ValueError):
+        r = get_poetry('author', output_format='lfhdsubg')
