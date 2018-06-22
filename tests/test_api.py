@@ -63,8 +63,14 @@ def test_get_poetry_linecount():
     assert r[0]['linecount'] == r[1]['linecount'] == r[2]['linecount']
 
 
+@vcr.use_cassette('tests/cassettes/test_get_poetry_combined.yml')
+def test_get_poetry_combination():
+    r = get_poetry('author,title', 'William Shakespeare;Spring and Winter ii', 'author,title')
+
+    assert r[0]['author'] == 'William Shakespeare'
+    assert r[0]['title'] == 'Spring and Winter ii'
+
+
 def test_poetry_exceptions():
-    with pytest.raises(ValueError):
-        r = get_poetry('asybr')
     with pytest.raises(ValueError):
         r = get_poetry('author', output_format='lfhdsubg')

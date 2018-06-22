@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='poetpy',
-    version='1.0.0',
+    version='1.1.0',
     author='Aaron Schlegel',
     author_email='aaron@aaronschlegel.com',
     description=('Python wrapper for the PoetryDB API.'),

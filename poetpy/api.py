@@ -67,9 +67,6 @@ def get_poetry(input_term, search_term=None, output=None, output_format=None, se
     """
     uri = 'http://poetrydb.org'
 
-    if input_term not in ('author', 'title', 'lines', 'linecount'):
-        raise ValueError("input term must be one of 'author', 'title', 'lines', or 'linecount'.")
-
     if search_type is not None and input_term != 'linecount':
         search_term = search_term + ':abs'
 
