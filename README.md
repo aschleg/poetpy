@@ -73,10 +73,12 @@ w = poetpy.get_poetry('author,title', 'William Shakespeare;I Wandered Lonely As 
 
 ## Further Examples and Notebooks
 
-A set of [Jupyter Notebooks](http://jupyter.org/) that further explore the potential usage of `poetpy` 
-and the PoetryDB API.
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/aschleg/poetpy/master?filepath=notebooks)
 
-* [Introduction to `poetpy`]()
+A set of [Jupyter Notebooks](http://jupyter.org/) that further explore the potential usage of `poetpy` 
+and the PoetryDB API. The notebooks can also be opened interactively using [binder](https://mybinder.org/)
+
+* [Introduction to `poetpy`](https://github.com/aschleg/poetpy/blob/master/notebooks/Introduction%20to%20Poetpy.ipynb)
 
 ## Requirements
 
