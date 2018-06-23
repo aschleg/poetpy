@@ -27,9 +27,56 @@ python setup.py install
 
 ## Examples
 
-~~~ python
+Extracting poetry and poets from the PoetryDB API requires at least one `input_term` 
+parameter. The `input_term` parameter results can be further refined with a corresponding 
+search term. For example, let's say we are interested in finding all of William Shakespeare's 
+poems and sonnets available in the PoetryDB API. 
 
+~~~ python
+w = poetpy.get_poetry('author', 'William Shakespeare')
 ~~~
+
+In the above example, the `input_term` is 'author' and the author we are interested 
+in finding is 'William Shakespeare'. 
+
+If we wanted to only output the lines and line counts of all of Shakespeare's poetry and sonnets, 
+we can use the `output` parameter to narrow the returned results.
+
+~~~ python
+w = poetpy.get_poetry('author', 'William Shakespeare', 'lines,linecounts')
+~~~
+
+The default output format from the PoetryDB API is JSON; however, we can change the 
+output to text by specifying the `output_format` parameter. 
+
+~~~ python
+w = poetpy.get_poetry('author', 'William Shakespeare', 'lines,linecounts', 'text')
+~~~
+
+The output text format will be newline escaped.
+
+Combination searches are also allowed to enable users to further refine the returned search results. 
+Each `input_term` should be given a corresponding search term delimited by a semi-colon. For example, 
+let's say we want to find all of []John Milton's](https://en.wikipedia.org/wiki/John_Milton) poetry 
+with [*Paradise Lost*](https://en.wikipedia.org/wiki/Paradise_Lost) in the title. 
+
+~~~ python
+get_poetry('title,author', 'Paradise Lost;Milton')
+~~~
+
+Different `input_term` parameter combinations can also be performed. Taking the above example, 
+let's say we are actually only interested in finding Wordworth's poem *I Wandered Lonely As A Cloud*.
+
+~~~ python
+w = poetpy.get_poetry('author,title', 'William Shakespeare;I Wandered Lonely As A Cloud')
+~~~
+
+## Further Examples and Notebooks
+
+A set of [Jupyter Notebooks](http://jupyter.org/) that further explore the potential usage of `poetpy` 
+and the PoetryDB API.
+
+* [Introduction to `poetpy`]()
 
 ## Requirements
 
@@ -43,3 +90,7 @@ python setup.py install
 * [PoetryDB](https://github.com/thundercomb/poetrydb) Github page with more information 
   regarding the implementation and design of PoetryDB and its API. The README of the 
   repository also contains other examples for working with the API (though not in Python).
+  
+## License
+
+GPL-2.0

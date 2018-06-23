@@ -5,7 +5,7 @@ $ cat .gitignore
 .idea/
 *.pyc
 *.xml
-notebooks
+notebooks/.ipynb_checkpoints
 *.egg-info
 /build/
 /dist/
