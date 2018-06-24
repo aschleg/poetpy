@@ -99,11 +99,9 @@ and the PoetryDB API. The notebooks can also be opened interactively using [bind
 [@thundercomb](https://twitter.com/thundercomb). They blog about poetry and related technology and 
 other topics at [thecombedthunderclap.blogspot.com](http://thecombedthunderclap.blogspot.com/).
 
-## Disclaimer
-
-I am in no way affiliated with the creator of PoetryDB. My intention with `poetpy` is to help spread the word 
-and hopefully increase interest in poetry and related projects that attempt to create a comprehensive 
-databases of publicly available knowledge.
+Please note, I am in no way affiliated with the creator of PoetryDB. My intention with `poetpy` is to 
+help spread the word and hopefully increase interest in poetry and related projects that attempt to 
+create a comprehensive databases of publicly available knowledge.
 
 ## License
 
