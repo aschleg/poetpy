@@ -25,7 +25,8 @@ def get_poetry(input_term, search_term=None, output=None, output_format=None, se
     Parameters
     ----------
     input_term : {'author', 'title', 'lines', 'linecount'}
-        The desired input term for searching PoetryDB. Must be one of 'author', 'title', 'lines', or 'linecount'.
+        The desired input term for searching PoetryDB. Must be one of or any combination of 'author',
+        'title', 'lines', or 'linecount'.
     search_term : str or None, optional
         Relates to the :code:`input_term`. The search term should be relevant to the given input term.
     output : str or None, optional

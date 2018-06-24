@@ -92,7 +92,19 @@ and the PoetryDB API. The notebooks can also be opened interactively using [bind
 * [PoetryDB](https://github.com/thundercomb/poetrydb) Github page with more information 
   regarding the implementation and design of PoetryDB and its API. The README of the 
   repository also contains other examples for working with the API (though not in Python).
-  
+
+## About PoetryDB
+
+[PoetryDB](http://poetrydb.org/index.html) was created and is currently maintained by 
+[@thundercomb](https://twitter.com/thundercomb). They blog about poetry and related technology and 
+other topics at [thecombedthunderclap.blogspot.com](http://thecombedthunderclap.blogspot.com/).
+
+## Disclaimer
+
+I am in no way affiliated with the creator of PoetryDB. My intention with `poetpy` is to help spread the word 
+and hopefully increase interest in poetry and related projects that attempt to create a comprehensive 
+databases of publicly available knowledge.
+
 ## License
 
 GPL-2.0
