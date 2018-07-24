@@ -79,7 +79,7 @@ A set of [Jupyter Notebooks](http://jupyter.org/) that further explore the poten
 and the PoetryDB API. The notebooks can also be opened interactively using [binder](https://mybinder.org/)
 
 * [Introduction to `poetpy`](https://github.com/aschleg/poetpy/blob/master/notebooks/Introduction%20to%20Poetpy.ipynb)
-* [Building a Poetry Database in PostgreSQL with Python, poetpy, pandas and sqlalchemy]()
+* [Building a Poetry Database in `PostgreSQL` with Python, `poetpy`, `pandas` and `sqlalchemy`](https://github.com/aschleg/poetpy/blob/master/notebooks/Building%20a%20Poetry%20Database%20in%20PostgreSQL%20with%20Python%2C%20poetpy%2C%20pandas%20and%20sqlalchemy.ipynb)
 
 ## Requirements
 
