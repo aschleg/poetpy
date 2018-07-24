@@ -6,6 +6,7 @@ $ cat .gitignore
 *.pyc
 *.xml
 notebooks/.ipynb_checkpoints
+notebooks/Untitled.ipynb
 *.egg-info
 /build/
 /dist/
