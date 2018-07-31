@@ -102,7 +102,7 @@ other topics at [thecombedthunderclap.blogspot.com](http://thecombedthunderclap.
 
 Please note, I am in no way affiliated with the creator of PoetryDB. My intention with `poetpy` is to 
 help spread the word and hopefully increase interest in poetry and related projects that attempt to 
-create a comprehensive databases of publicly available knowledge.
+create comprehensive databases of publicly available knowledge.
 
 ## License
 
