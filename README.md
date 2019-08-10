@@ -84,8 +84,6 @@ and the PoetryDB API. The notebooks can also be opened interactively using [bind
 ## Requirements
 
 * Python 3.4+
-  - `poetpy` should also work fine on Python 2.7, however; given that 2.7 support 
-    will be discontinued in the near future, 2.7 will not be tested or supported.
 * `requests >= 2.18`
 
 ## See Also

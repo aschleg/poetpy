@@ -5,8 +5,8 @@ $ cat .gitignore
 .idea/
 *.pyc
 *.xml
-notebooks/.ipynb_checkpoints
-notebooks/Untitled.ipynb
+notebooks/drafts
 *.egg-info
 /build/
 /dist/
+venv/
