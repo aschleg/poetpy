@@ -5,7 +5,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/jprq31sokv9rlbuh?svg=true)](https://ci.appveyor.com/project/aschleg/poetpy)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7abf894070ba46418181f9d07af68838)](https://www.codacy.com/app/aschleg/poetpy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aschleg/poetpy&amp;utm_campaign=Badge_Grade)
 [![Coverage Status](https://coveralls.io/repos/github/aschleg/poetpy/badge.svg?branch=master)](https://coveralls.io/github/aschleg/poetpy?branch=master)
-![https://pypi.org/project/poetpy/](https://img.shields.io/badge/pypi%20version-1.1.0-blue.svg)
+![https://pypi.org/project/poetpy/](https://img.shields.io/badge/pypi%20version-1.1.1-blue.svg)
 ![https://pypi.org/project/petpy/](https://img.shields.io/badge/python-3.4%2C%203.5%2C%203.6%2C%203.7-blue.svg)
 
 Python wrapper of the [PoetryDB API](http://poetrydb.org/).
